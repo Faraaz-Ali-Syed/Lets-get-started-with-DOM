@@ -1,5 +1,4 @@
-Header.style.borderColor="Black";
-
-var items = document.getElementsByClassName('list-group-item');
-items.style.fontWeight = 'bold';
-items[3].style.backgroundcolor = 'green';
+var li = document.getElementsByTagName('li');
+console.log(li);
+console.log(li[1]);
+li[1].textContent = 'Hello 2';
