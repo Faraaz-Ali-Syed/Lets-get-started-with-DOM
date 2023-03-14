@@ -4,6 +4,7 @@ var filter = document.getElementById('filter');
 
 // Form submit event
 form.addEventListener('submit', addItem);
+
 // Delete event
 itemList.addEventListener('click', removeItem);
 // Filter event
@@ -28,10 +29,10 @@ function addItem(e){
 
   //Creating edit button element
 
-  var editBtn = document.createElement('button');
-  editBtn.appendChild(document.createTextNode('Edit'));
-  li.append(editBtn);
-  itemList.appendChild(li);
+  //var editBtn = document.createElement('button');
+  //editBtn.appendChild(document.createTextNode('Edit'));
+  //li.append(editBtn);
+ 
 
   // Add classes to del button
   deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
@@ -44,6 +45,13 @@ function addItem(e){
 
   // Append li to list
   itemList.appendChild(li);
+
+
+  var newDesc = document.getElementById('description').value;
+  newDesc.className = 'btn btn-danger btn-sm float-right delete';
+  li.appendChild(document.createTextNode(newDesc));
+  li.appendChild(newDesc);
+
 }
 
 // Remove item
@@ -72,3 +80,4 @@ function filterItems(e){
     }
   });
 }
+
